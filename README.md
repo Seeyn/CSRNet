@@ -9,11 +9,11 @@ There are several args to set before running the .py file:
 	python test.py --path ./example --model Baseline 
 
 --path indicates the location of the images directory, please guarantee that the image size is 192x192x3. 
---model indicates use which models and we have 6 choices 'Baseline','B+Shape','B+FaceNet','B+EfficientNet','B+Identity','CSRNet'.
+--model indicates use which models and we have 5 choices 'Baseline','B+Shape','B+FaceNet','CSRNet','GAN'.
 
 For example,
-	python test.py --path ./helen --model B+EfficientNet
-will use the images under './helen' to test our 'B+EfficientNet' model.
+	python test.py --path ./helen --model B+FaceNet
+will use the images under './helen' to test our 'B+FaceNet' model.
 
 If we do not set path and model, the program will test the images under './example' using model 'CSRNet'.
 To run test.py, we need to guarantee that the models weights files : '.hdf5' files is stored in './model' directory, please download the models weight files from our cloud disk before testing.
@@ -21,7 +21,7 @@ To run test.py, we need to guarantee that the models weights files : '.hdf5' fil
 The program will create 'X2' 'X4' 'X8' directories and a 'result.txt' file. The super-resolved images is stored in the directories. 
 The PSNR and SSIM results is calculated and stored in 'result.txt'.
 
-#############
+
 
 ### train.py
 
@@ -34,7 +34,7 @@ Then simply run:
 
 	python train.py 
 
-#############
+
 
 ### cloud disk
 
